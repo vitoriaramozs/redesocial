@@ -24,12 +24,12 @@ function receberDadosPublicacao(){
         if(!isset($dados[$campo]) ||
             !is_string($dados[$campo]) ||
             trim($dados[$campo]) === "") {
-                http_response_code(400)
+                http_response_code(400);
                 echo json_encode([
-                "erro" =>
-                "O campo $campo é obrigatório e deve ser um texto não vazio."
-            ])
-            return null;
+                    "erro" =>
+                    "O campo $campo é obrigatório e deve ser um texto não vazio."
+                ]);
+                return null;
             }
     }
 

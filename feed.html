@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feed | Nexly</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/feed.js" defer></script>
+</head>
+
+<body class="feed-page">
+
+    <!-- CABEÇALHO -->
+    <header class="topbar">
+
+        <a href="feed.html" class="brand">
+            <span class="brand-mark tiny">Nx</span>
+            Nexly
+        </a>
+
+        <div class="topbar-user">
+
+            <span id="usuario-logado"></span>
+
+            <button id="sair" class="text-button" type="button">
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="feed-layout">
+
+        <!-- LATERAL -->
+        <aside class="side-card">
+
+            <div class="brand-mark">Nx</div>
+
+            <h2>Seu espaço.</h2>
+
+            <p class="muted">
+                Compartilhe ideias e acompanhe o que
+                sua comunidade está publicando.
+            </p>
+
+        </aside>
+
+
+        <!-- FEED -->
+        <section class="feed-content">
+
+            <!-- CRIAR PUBLICAÇÃO -->
+            <div class="composer card">
+
+                <h1>Seu feed</h1>
+
+                <form id="post-form">
+
+                    <label for="texto-post" class="sr-only">
+                        O que você quer compartilhar?
+                    </label>
+
+                    <textarea
+                        id="texto-post"
+                        maxlength="500"
+                        placeholder="O que você quer compartilhar?"
+                        required
+                    ></textarea>
+
+                    <div class="composer-footer">
+
+                        <small>
+                            Até 500 caracteres
+                        </small>
+
+                        <button type="submit" class="button">
+                            Publicar
+                        </button>
+
+                    </div>
+
+                    <p
+                        id="post-mensagem"
+                        class="message"
+                        role="status"
+                    ></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- LISTA DE PUBLICAÇÕES -->
+            <div class="feed-heading">
+
+                <h2>Publicações</h2>
+
+                <span id="total-posts" class="muted"></span>
+
+            </div>
+
+            <div id="lista-posts" class="posts-list">
+
+                <!-- As publicações serão inseridas pelo JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
